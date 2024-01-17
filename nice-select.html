@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nice Select</title>
+  <link rel="stylesheet" href="librariesAssets/css/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="librariesAssets/css/nice-select/nice-select.min.css">
+  <link rel="stylesheet" href="librariesAssets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Nice Select</h1>
+    <form class="row" onsubmit="handleSubmit(e)">
+      <div class="col-4">
+        <select name="name">
+          <option selected>Select Name</option>
+          <option value="Tset Dev 1">Tset Dev 1</option>
+          <option value="Test Dev 2">Test Dev 2</option>
+          <option value="Test Dev 3">Test Dev 3</option>
+        </select>
+      </div>
+      <div class="col-4">
+        <button class="btn btn-success">Send</button>
+      </div>
+    </form>
+  </div>
+  <script src="librariesAssets/scripts/jquery.js"></script>
+  <script src="librariesAssets/scripts/nice-select/jquery.nice-select.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('select:not(.ignore)').niceSelect();
+      FastClick.attach(document.body);
+    });    
+    const handleSubmit = (e) => {
+      e.preventDefault();
+    }
+  </script>
+</body>
+</html>
